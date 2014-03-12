@@ -1,3 +1,6 @@
+registered_typetables = []
+
+
 def typetable(cls):
     return cls
 
