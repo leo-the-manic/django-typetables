@@ -18,8 +18,8 @@ class Race(models.Model):
     HISPANIC = typetable.Value('Hispanic/Latin American', 'Hispanic')
 
     @typetable.to_object
-    def make_value(self, name, abbreviation):
-        return Race(name=name, abbreviation=abbreviation)
+    def make_value(cls, name, abbreviation):
+        return cls(name=name, abbreviation=abbreviation)
 
     name = models.CharField(max_length=25)
 
